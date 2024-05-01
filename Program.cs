@@ -19,6 +19,9 @@ namespace Calculator
             Console.WriteLine("Opção 2 - Subtração: ");
             Console.WriteLine("Opção 3 - Divisão: ");
             Console.WriteLine("Opção 4 - Multiplicação: ");
+            Console.WriteLine("Opção 5 - Sair");
+
+
             Console.WriteLine(" ---------- ");
             Console.WriteLine("Selecione uma opção: ");
             short res = short.Parse(Console.ReadLine());
@@ -30,6 +33,8 @@ namespace Calculator
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
+                case 5: System.Environment.Exit(0); break;
+
                 default: Menu(); break;
             }
 
@@ -97,6 +102,7 @@ namespace Calculator
 
         static void Multiplicacao()
         {
+            Console.Clear();
             Console.WriteLine("Primeiro valor: ");
             float v1 = float.Parse(Console.ReadLine());
 
